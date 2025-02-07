@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* text rolling  */
+
+.roller {
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Create continuous scrolling effect */
+.roller #rolltext {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  animation: smooth-scroll 6s linear infinite;
+  will-change: transform;
+}
+
+/* Keyframe Animation - Seamless Loop */
+/* @keyframes smooth-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+} */
+
+.rowRed {
+  background-color: #f51767;
+}
+.lightBlue {
+  background-color: #f6f6fb;
+}
