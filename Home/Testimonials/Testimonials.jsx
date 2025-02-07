@@ -95,15 +95,15 @@ const Testimonials = () => {
   }, [slider]);
 
   return (
-    <section className="py-16 px-4 md:px-16 h-fit text-gray-800 bg-gray-100 ">
+    <section className="py-16 px-4 md:px-16 h-fit text-gray-800 bg-gray-100  ">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold">What 1000's of successful ZTM students are saying</h2>
         <p className="text-gray-500 max-w-2xl mx-auto mt-2">We've helped thousands of people (just like you) go from zero to getting hired in their dream role to advancing their careers.</p>
       </div>
       {/* Testimonial Slider */}
-      <div ref={sliderRef} className="keen-slider rounded-2xl ">
+      <div ref={sliderRef} className="keen-slider rounded-2xl max-w-[1440px] ml-auto ">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="keen-slider__slide bg-white shadow-lg rounded-2xl p-6 min-w-xs max-w-xs relative overflow-visible z-10">
+          <div key={index} className="keen-slider__slide bg-white shadow-lg rounded-2xl p-6 min-w-xs max-w-xs relative overflow-visible z-10 ">
             {/* User Profile */}
             <div className="flex items-center  z-20">
               <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full border-2 border-white z-10" />

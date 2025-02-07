@@ -47,26 +47,30 @@ const MemberShip = () => {
           </div>
 
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-            <div className="h-fit max-w-lg  bg-white rounded-3xl sm:rounded-3xl shadow-lg text-gray-700 mx-auto sm:-mt-25 ">
-              <h3 className="text-3xl sm:text-4xl h-48 bg-secondary font-semibold  rounded-t-3xl text-white flex flex-col items-center justify-center text-center z-10">
-                Zero To Mastery
-                <span className="block text-2xl sm:text-3xl">$25-$1,298</span>
-              </h3>
+            <motion.button whileHover={{ scale: 1.05, transition: { duration: 2, ease: "easeOut", transformOrigin: "center" } }} whileTap={{ scale: 0.9, transition: { duration: 2, ease: "easeInOut" } }}>
+              <div className="h-fit max-w-lg  bg-white rounded-3xl sm:rounded-3xl shadow-lg text-gray-700 mx-auto sm:-mt-25 ">
+                <h3 className="text-3xl sm:text-4xl h-48 bg-secondary font-semibold  rounded-t-3xl text-white flex flex-col items-center justify-center text-center z-10">
+                  Zero To Mastery
+                  <span className="block text-2xl sm:text-3xl">$25-$1,298</span>
+                </h3>
 
-              <div className="mt-4 p-8 space-y-4 ">
-                {[...Array(5)].map((_, index) => (
-                  <div key={index} className="flex items-start gap-2 sm:gap-4 text-lg sm:text-xl">
-                    <FaCheckCircle className="min-w-5 sm:min-w-10  text-secondary text-3xl sm:text-4xl" />
-                    <p className="">
-                      <span className="font-bold text-gray-600">Get a clear step-by-step career roadmap</span> to go from zero (or any skill level) to getting hired or promoted.
-                    </p>
-                  </div>
-                ))}
+                <div className="mt-4 p-8 space-y-4 ">
+                  {[...Array(5)].map((_, index) => (
+                    <div key={index} className="flex items-start gap-2 sm:gap-4 text-lg sm:text-xl">
+                      <FaCheckCircle className="min-w-5 sm:min-w-10  text-secondary text-3xl sm:text-4xl" />
+                      <p className="">
+                        <span className="font-bold text-gray-600">Get a clear step-by-step career roadmap</span> to go from zero (or any skill level) to getting hired or promoted.
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="px-8">
+                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} whileDrag={{ scale: 0.9, rotate: 10 }} drag className="btn btn-block mt-3 p-8 mb-8 bg-pink-600  text-white font-bold text-2xl  rounded-full shadow-lg hover:bg-pink-700 transition duration-300 ">
+                    JOIN ZERO TO MASTERY
+                  </motion.button>
+                </div>
               </div>
-              <div className="px-8">
-                <button className="btn btn-block mt-3 p-8 mb-8 bg-pink-600  text-white font-bold text-2xl  rounded-full shadow-lg hover:bg-pink-700 transition duration-300 ">JOIN ZERO TO MASTERY</button>
-              </div>
-            </div>
+            </motion.button>
           </motion.div>
 
           {/* Bootcamps & College */}
